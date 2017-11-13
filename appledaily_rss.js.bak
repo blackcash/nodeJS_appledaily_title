@@ -20,7 +20,7 @@ var content = function(filename,url) {
      });  
 
     fs.writeFile(filename+'.csv', dataString,'utf-8', function() {
-		console.log("finish  "+filename+"!!");
+		console.log("finish  !!");
 	});
 
   });
