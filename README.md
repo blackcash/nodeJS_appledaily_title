@@ -1,4 +1,4 @@
-#使用cheerio 抓取蘋果日報的RSS資訊
+#使用cheerio 抓取蘋果日報的RSS項目名稱
 <br>
 安裝要物用的套件:<br>
 npm install request <br>
