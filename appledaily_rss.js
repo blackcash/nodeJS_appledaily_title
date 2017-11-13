@@ -40,10 +40,12 @@ var exchange = function() {
 	var list = ['inst_all','head_all','entertainment_all','international_all','sport_all','biz_all','re_all','columt_all','sub_all']	
 	for (var i=0 ; i < list.length ; i++ )
 	{
+		  var index = 0;
 		  $('.each_level .'+list[i]+' li a').each(function(i, element) {
                     console.log("category:"+$(this).text()+"   link:"+ $(this).attr("href"))
 					dataString = dataString + $(this).text() +",https://tw.appledaily.com/"+ $(this).attr("href")+"\n";
- 				    result_link.push( {'title' :list[i], 'link' :"https://tw.appledaily.com/"+ $(this).attr("href")})
+ 				    result_link.push( {'title' :list[i]+String(index), 'link' :"https://tw.appledaily.com/"+ $(this).attr("href")})
+					index += 1; 
           }); 
 	}
     fs.writeFile('appledaily_rss_title.csv', dataString,'utf-8', function() {
