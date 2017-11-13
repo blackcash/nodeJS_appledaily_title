@@ -17,7 +17,7 @@ var exchange = function() {
 	{
 		  $('.each_level .'+list[i]+' li a').each(function(i, element) {
                     console.log("category:"+$(this).text()+"   link:"+ $(this).attr("href"))
-					dataString = dataString + $(this).text() +","+ $(this).attr("href")+"\n";
+					dataString = dataString + $(this).text() +",https://tw.appledaily.com/"+ $(this).attr("href")+"\n";
           });  
 	}
     fs.writeFile('appledaily_rss_title.csv', dataString,'utf-8', function() {
